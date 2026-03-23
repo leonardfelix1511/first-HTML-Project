@@ -1,171 +1,169 @@
 /* Import Google Fonts for modern font */
-@import url('https://fonts.googleapis.com/css2?family=Fraunces:wght@400;500;700&family=Montserrat:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700&family=Urbanist:wght@300;400;500;600;700&display=swap');
 
 :root {
-    --soft-peach: #FFD8B1;
-    --terracotta: #E2725B;
-    --golden-honey: #FFD700;
-    --dark-chocolate: #3E2723;
-    --background-light: #FDFBF8;
+    --electric-coral: #FF6F61;
+    --oat-milk: #F5F5DC;
+    --charcoal-teal: #2F4F4F;
+    --icy-blue: #D1E8E2;
 }
 
-/* Global styles */
 * {
     box-sizing: border-box;
 }
 
 body {
-    font-family: 'Montserrat', sans-serif;
-    background-color: var(--background-light);
-    color: var(--dark-chocolate);
+    font-family: 'Urbanist', sans-serif;
+    background-color: var(--oat-milk);
+    color: var(--charcoal-teal);
     margin: 0;
     padding: 0;
+    padding-top: 80px;
     line-height: 1.6;
+    letter-spacing: 0.5px;
 }
 
-h1, h2, h3, h4 {
-    font-family: 'Fraunces', serif;
-    letter-spacing: 0.04em;
-    margin-top: 0;
-    color: var(--dark-chocolate);
+.top-nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: grid;
+    grid-template-columns: minmax(180px, 1fr) auto minmax(180px, 1fr);
+    align-items: center;
+    column-gap: 20px;
+    padding: 16px 24px;
+    background-color: var(--oat-milk);
+    border-bottom: 1px solid var(--charcoal-teal);
+    z-index: 10000;
+}
+
+.top-nav .logo {
+    font-family: 'Syne', sans-serif;
+    font-weight: 700;
+    font-size: 24px;
+    color: var(--charcoal-teal);
+    text-decoration: none;
+    justify-self: center;
+}
+
+.top-nav nav {
+    display: flex;
+    gap: 20px;
+}
+
+.top-nav .nav-left {
+    justify-self: center;
+}
+
+.top-nav .nav-right {
+    justify-self: center;
+}
+
+.top-nav nav.nav-left,
+.top-nav nav.nav-right {
+    justify-content: center;
+    min-width: 180px;
+}
+
+.top-nav .nav-item {
+    color: var(--charcoal-teal);
+    font-family: 'Urbanist', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.top-nav .nav-item:hover {
+    color: var(--electric-coral);
+}
+
+h1, h2 {
+    font-family: 'Syne', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: -1px;
+    color: var(--charcoal-teal);
     text-align: center;
+    font-weight: 700;
 }
 
-p, li, a, span, div {
-    font-family: 'Montserrat', sans-serif;
+h3 {
+    font-family: 'Urbanist', sans-serif;
+    letter-spacing: 0.5px;
+    color: var(--charcoal-teal);
+}
+
+p, li, span, div {
+    font-family: 'Urbanist', sans-serif;
+    letter-spacing: 0.5px;
 }
 
 a {
-    color: var(--terracotta);
+    color: var(--electric-coral);
     text-decoration: none;
 }
 
 a:hover {
-    color: var(--golden-honey);
+    color: var(--charcoal-teal);
 }
 
-/* Color blocking sections */
-.section-pistachio,
-.section-terracotta,
-.section-light {
+.section-1 {
+    background-color: var(--oat-milk);
+    color: var(--charcoal-teal);
     width: 100%;
-    padding: 60px 20px;
+    padding: 80px 40px;
+    margin: 40px 0;
+}
+.section-2,
+.section-3 {
+    width: 100%;
+    padding: 80px 40px;
+    margin: 40px 0;
 }
 
-.section-pistachio {
-    background-color: var(--soft-peach);
-    color: var(--dark-chocolate);
+.section-2 {
+    background-color: var(--oat-milk);
+    color: var(--charcoal-teal);
 }
 
-.section-terracotta {
-    background-color: var(--terracotta);
+.section-3 {
+    background-color: var(--electric-coral);
     color: #ffffff;
 }
 
-.section-light {
-    background-color: var(--background-light);
-    color: var(--dark-chocolate);
+.section-1 {
+    background-color: var(--icy-blue);
+    color: var(--charcoal-teal);
 }
 
-.section-pistachio h1,
-.section-terracotta h1,
-.section-light h1,
-.section-pistachio h2,
-.section-terracotta h2,
-.section-light h2,
-.section-pistachio h3,
-.section-terracotta h3,
-.section-light h3 {
+.section-oat-milk h1,
+.section-electric-coral h1,
+.section-icy-blue h1,
+.section-oat-milk h2,
+.section-electric-coral h2,
+.section-icy-blue h2,
+.section-oat-milk h3,
+.section-electric-coral h3,
+.section-icy-blue h3 {
     color: inherit;
 }
 
-/* Dropdown menu styles */
-.dropdown {
-    position: fixed;
-    top: 20px;
-    right: 20px;
-    z-index: 1000;
-}
-
-.dropbtn {
-    background-color: var(--background-light);
-    color: var(--dark-chocolate);
-    padding: 10px;
-    font-size: 16px;
-    border: 2px solid var(--terracotta);
-    border-radius: 8px;
-    cursor: pointer;
-    font-family: 'Montserrat', sans-serif;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-}
-
-.dropbtn span {
-    display: block;
-    width: 20px;
-    height: 2px;
-    background-color: var(--dark-chocolate);
-    margin: 3px 0;
-    transition: 0.3s;
-}
-
-.dropbtn:hover {
-    background-color: #fff6d9;
-}
-
-.dropdown-content {
-    position: absolute;
-    right: 100%;
-    top: 0;
-    background-color: var(--background-light);
-    min-width: 180px;
-    box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
-    z-index: 1;
-    border-radius: 8px;
-    border: 1px solid var(--terracotta);
-    opacity: 0;
-    transform: translateX(100%);
-    transition: all 0.3s ease;
-    pointer-events: none;
-}
-
-.dropdown-content a {
-    color: var(--dark-chocolate);
-    padding: 12px 16px;
-    text-decoration: none;
-    display: block;
-    border-bottom: 1px solid #ffd7b7;
-}
-
-.dropdown-content a:first-child {
-    border-radius: 8px 8px 0 0;
-}
-
-.dropdown-content a:last-child {
-    border-radius: 0 0 8px 8px;
-    border-bottom: none;
-}
-
-.dropdown-content a:hover {
-    background-color: #fff7c4;
-}
-
-.dropdown:hover .dropdown-content {
-    opacity: 1;
-    transform: translateX(0);
-    pointer-events: auto;
-}
-
+/* Remove rounded corners for Urban Gelato */
+.section-1,
+.section-2,
+.section-3,
 footer {
-    background-color: var(--dark-chocolate);
-    color: #FDFBF8;
+    border-radius: 0;
+}
+
+/* Footer styles */
+footer {
+    background-color: var(--charcoal-teal);
+    color: var(--oat-milk);
     text-align: center;
-    padding: 18px 10px;
-    position: fixed;
+    padding: 20px 10px;
+    position: static;
     bottom: 0;
     width: 100%;
 }
-</content>
-<parameter name="filePath">/Users/leo/Desktop/html lernen/style.css
